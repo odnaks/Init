@@ -1,0 +1,2 @@
+# uid_min = 1000; uid_max = 60000 (/etc/login.defs)
+getent passwd {1000..60000} | awk -F: '{print $1}'

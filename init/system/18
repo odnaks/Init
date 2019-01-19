@@ -1,0 +1,2 @@
+# sudo service ssh status | grep PID | awk '{print $3}'
+sudo kill [PID]

@@ -1,0 +1,31 @@
+#!/bin/bash
+# 01 + enter your login
+if read -t 5 -p "enter login: " login
+then 
+	IFS=$'\n'
+	for i in $(cat /etc/passwd)
+	do
+		log=$(echo "$i" | awk -F: '{print $1}')
+		if [ $log \= $login ]
+			then
+				echo
+				echo -n login: 
+				echo "$i" | awk -F: '{print $1}'
+				echo -n pass:
+				echo "$i" | awk -F: '{print $2}'
+				echo -n UID:
+				echo "$i" | awk -F: '{print $3}'
+				echo -n GID:
+				echo "$i" | awk -F: '{print $4}'
+				echo -n GECOS:
+				echo "$i" | awk -F: '{print $5}'
+				echo -n home dir:
+				echo "$i" | awk -F: '{print $6}'
+				echo -n command interpreter:
+				echo "$i" | awk -F: '{print $6}'
+				exit;
+			fi
+	done
+	echo
+	echo "login not found :("
+fi

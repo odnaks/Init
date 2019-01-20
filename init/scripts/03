@@ -1,8 +1,13 @@
 #!/bin/bash
 # sent files to VM
-# if read -t 15 -p "укажите путь до проекта  init: " path
-# then
-	scp -r -P 2222 ~/Desktop/init user@127.0.0.1:~/Desktop/
-# else
-#	echo "попробуй быстрее"
-#fi
+if read -t 10 -p "sent project to VM? (y/n) " ans
+then
+case $ans in
+y) scp -r -P 2222 ~/Desktop/init user@127.0.0.1:~/Desktop ;;
+n)  echo
+	echo "OK :( ";;
+esac
+else
+	echo
+	echo "too slow..."
+fi

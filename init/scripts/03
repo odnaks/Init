@@ -1,15 +1,8 @@
 #!/bin/bash
-# исполняемые файлы
-IFS=:
-for folder in $PATH
-	do 
-		echo "$folder:"
-		for file in $folder/*
-			do 
-				if [ -x $file ]
-					then 
-					echo " $file"
-				fi
-			done
-	done
-
+# sent files to VM
+# if read -t 15 -p "укажите путь до проекта  init: " path
+# then
+	scp -r -P 2222 ~/Desktop/init user@127.0.0.1:~/Desktop/
+# else
+#	echo "попробуй быстрее"
+#fi

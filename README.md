@@ -1,5 +1,5 @@
 # INIT
-![intr](https://github.com/odnaks/trash/blob/master/init.png)
+![intr](https://github.com/odnaks/settings/blob/master/screens/init.png)
 
 ### my mark:
-![mark](https://github.com/odnaks/trash/blob/master/init%20mark.png)
+![mark](https://github.com/odnaks/settings/blob/master/screens/init%20mark.png)
